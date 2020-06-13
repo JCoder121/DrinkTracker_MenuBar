@@ -27,7 +27,7 @@ import SwiftUI
  */
 
 struct ContentView: View {
-  
+    
     //only integers for counting, no half ounces etc.
     @State var total_water = 0
     @State var entered_water = ""
@@ -68,6 +68,7 @@ struct ContentView: View {
             //input
             TextField("... oz", text: $entered_water).padding()
             
+            
             HStack {
                 
                 //add water button, disabled if nothing entered in field
@@ -101,6 +102,15 @@ struct ContentView: View {
                 {
                     Text("Reset")
                 }.disabled(self.total_water == 0)
+                
+                //quit app button, command q still works
+                Button(action: {
+                    NSApplication.shared.terminate(self)
+                })
+                {
+                    Text("Quit App")
+                }
+                
             
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
         }

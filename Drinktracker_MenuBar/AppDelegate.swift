@@ -35,7 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
             
             if let button = self.statusBarItem.button {
-                button.image = NSImage(named: "waterdrop2")
+                //button.image = NSImage(named: "waterdrop2")
+                button.title = "💧"
                 button.action = #selector(togglePopover(_:))
             }
         }
@@ -51,6 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         }
+    
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
