@@ -76,7 +76,7 @@ struct ContentView: View {
                     //check if entered value contains only numbers
                     self.isInt = true
                     
-                    //very inefficient way
+                    //very inefficient check for numbers
                     for char in self.entered_water {
                         if !(self.number_check.contains(String(char))) {
                             self.isInt = false
@@ -113,8 +113,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-
-
 
